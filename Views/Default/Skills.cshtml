@@ -1,0 +1,33 @@
+﻿@using CVLingtoSQL.Models.Entity
+@model List<Yetenekler>
+<div class="container">
+    <h3 class="w3_head mb-4 text-left">Skills</h3>
+
+    <ul class="list-unstyled mt-5">
+        @foreach (var yet in Model)
+        {
+            <li>
+                <div class="row">
+                    <div class="col-2 ic-lft">
+                        <span class="fa fa-code"></span>
+                    </div>
+                    <div class="col-10">
+                        <h6>@yet.Yetenek </h6>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <div class="col-2 ic-lft">
+                        <span class="fa fa-percent"></span>
+                    </div>
+                    <div class="col-10">
+                        <h6>@yet.Derece </h6>
+                    </div>
+                </div>
+            </li>
+        }
+
+
+    </ul>
+</div>

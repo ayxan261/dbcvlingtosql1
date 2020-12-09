@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using CVLingtoSQL.Models.Entity
+@model List<Ilestisim>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Mail</th>
+        <th>Title</th>
+        <th>Message</th>
+        <th>Delete</th>
+    </tr>
+    <tbody>
+        @foreach (var con in Model)
+        {
+            <tr>
+                <td>@con.AdSoyad</td>
+                <td>@con.Mail</td>
+                <td>@con.Konu</td>
+                <td><a href="/Admin/MesajGoster/@con.Id" class="btn btn-danger">Message</a></td>
+                <td><a href="/Admin/ContactSil/@con.Id" class="btn btn-danger">Delete</a></td>
+
+                
+            </tr>
+        }
+    </tbody>
+</table>
+

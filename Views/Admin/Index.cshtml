@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using CVLingtoSQL.Models.Entity
+@model List<Yetenekler>
+
+<br/>
+<a href="/Admin/YetenekEkle" class="btn btn-primary" style="margin-bottom:20px;">New Skill</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Skill</th>
+        <th>Degree</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    <tbody>
+        @foreach (var skil in Model)
+        {
+            <tr>
+                <td>@skil.Yetenek</td>
+                <td>@skil.Derece</td>
+                <td><a href="/Admin/YetenekSil/@skil.Id" class="btn btn-danger">Delete</a></td>
+                <td><a href="/Admin/YetenekGetir/@skil.Id" class="btn btn-success">Update</a>
+</tr>
+        }
+    </tbody>
+</table>
+

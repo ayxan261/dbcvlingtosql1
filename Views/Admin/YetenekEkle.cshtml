@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "YetenekEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model CVLingtoSQL.Models.Entity.Yetenekler
+
+
+@using (Html.BeginForm("YetenekEkle", "Admin",FormMethod.Post))
+{
+    <div class="form-control">
+        @Html.LabelFor(m=>m.Yetenek)
+        @Html.TextBoxFor(m => m.Yetenek, new { @class="form-control" })
+        <br/>
+        @Html.LabelFor(m=>m.Derece)
+        @Html.TextBoxFor(m => m.Derece, new { @class="form-control" })
+        <br/>
+        <button class="btn btn-info" style="margin-top:20px;">Create</button>
+
+    </div>
+    
+}
+

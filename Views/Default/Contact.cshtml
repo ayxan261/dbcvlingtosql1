@@ -1,0 +1,19 @@
+﻿
+
+@model CVLingtoSQL.Models.Entity.Ilestisim
+<div class="contact_grid_right mt-5 mx-auto text-left">
+    <form action="#" method="post">
+        <div class="row contact_top">
+            
+            <div class="col-sm-6">
+                <input type="email" name="Mail" placeholder="Email" required="">
+            </div>
+        </div>
+        <input type="text" name="AdSoyad" placeholder="Name" required="">
+        <input type="text" name="Konu" placeholder="Title" required="">
+        <textarea name="Mesaj" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+        <button type="submit" class="btn">Send Message</button>
+        <button type="reset" class="btn">Reset</button>
+        <div class="clearfix"></div>
+    </form>
+</div>

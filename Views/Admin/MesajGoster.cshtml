@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "MesajGoster";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model CVLingtoSQL.Models.Entity.Ilestisim
+
+<div class="form-control">
+    @Html.LabelFor(m=>m.AdSoyad)
+    @Html.TextBoxFor(m => m.AdSoyad, new { @class = "form-control" })
+    <br/>
+    @Html.LabelFor(m=>m.Mail)
+    @Html.TextBoxFor(m => m.Mail, new { @class="form-control" })
+    <br/>
+    @Html.LabelFor(m=>m.Konu)
+    @Html.TextBoxFor(m => m.Konu, new { @class="form-control" })
+    <br/>
+    @Html.LabelFor(m=>m.Mesaj)
+    @Html.TextAreaFor(m => m.Mesaj, new { @class="form-control" })
+</div>
+
